@@ -1,0 +1,515 @@
+/** Style for whole document **/
+
+* {
+  font-family: 'roboto', sans-serif;
+}
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 22pt;
+  line-height: 37pt;
+  margin: 0px;
+}
+
+h3 {
+  font-size: 11pt;
+  line-height: 3pt;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+
+}
+
+
+/** Body Style **/
+
+body {
+  text-align: center;
+  background-image: url('../image/geometry2.png');
+}
+
+.container {
+  margin-top: 30px;
+}
+
+.container ul li {
+  padding: 1em 0;
+}
+
+
+/*Side panel styles*/
+
+.sideinfo {
+  background-color: #5da4d9;
+  text-align: left;
+  color: #ffffff;
+  height: 828px;
+}
+
+.sideinfo .profile_poster .profile_picture {
+  background-image: url(https://genetica.incor.usp.br/wp-content/uploads/2014/07/user_default.png);
+  /*https://assets.entrepreneur.com/content/16x9/822/20150406145944-dos-donts-taking-perfect-linkedin-profile-picture-selfie-mobile-camera-2.jpeg
+  /*http://graciousparadise.org/wp-content/uploads/2014/02/photodune-1567655-business-woman-xs.jpg*/
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: inherit;
+  width: inherit;
+  margin-top: -15px;
+}
+
+.sideinfo .profile_poster .profile_title {
+  margin-top: 50%;
+  padding-bottom: 10px;
+}
+
+.sideinfo .profile_poster .profile_title input {
+  font-size: 22pt;
+  line-height: 37pt;
+  margin: 0px;
+  text-shadow: 1px 2px 8px #000000;
+  background: transparent;
+  border: none;
+  border-radius: 5pt;
+  transition: 1s ease background;
+  width: 98%;
+}
+
+.sideinfo .profile_information {
+  margin-top: 10px;
+}
+
+.sideinfo .profile_information p {
+  padding-top: 10px;
+}
+
+.sideinfo .profile_information input {
+  margin-right: 15%;
+  text-align: right;
+  padding-right: 5pt;
+  float: right;
+  width: 50%;
+  background: transparent;
+  border: none;
+  border-radius: 5pt;
+  transition: 1s ease background;
+}
+
+/*info pngs - delete imgs if not needed and change above clause - no text algin
+and margin-left 10%*/
+
+img {
+  width: auto;
+  height: auto;
+}
+
+.sideinfo .profile_information img {
+  float: left;
+  width: auto;
+  margin-left: 10%;
+  height: auto;
+  padding-bottom: 2%;
+  margin-top: -1%;
+}
+
+.sideinfo .profile_information .gly {
+  float: left;
+  width: auto;
+  margin-left: 12%;
+  height: auto;
+  padding-bottom: 3.5%;
+  font-size: 17pt;
+  color: #ffffff;
+}
+
+.sideinfo .profile_information .img2 {
+  padding-top: 15px;
+}
+
+.sideinfo .profile_information .line {
+  background-color: #ffffff;
+  padding-bottom: 2px;
+  margin-top: 5%;
+  width: 80%;
+  margin-left: 10%;
+  opacity: 0.4;
+  clear: both;
+}
+
+.sideinfo .profile_information .editinfobuts {
+  margin-right: 9%;
+  margin-top: 2%;
+}
+
+.sideinfo .profile_information .editinfo {
+  display: inline;
+  float: right;
+  opacity: 0.6;
+}
+
+.sideinfo .profile_information .confirminfo, .editpicture {
+  visibility: hidden;
+}
+
+.modal {
+  color: black;
+}
+
+#my_file {
+  display: none;
+}
+
+.sideinfo .profile_information .editinfo:hover {
+  opacity: 1;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.sideinfo .profile_links {
+  margin-top: 30%;
+}
+
+.sideinfo .profile_links h2 {
+  margin-left: 12%;
+  line-height: 0pt;
+  font-size: 18pt;
+  padding-bottom: 7%;
+}
+
+.sideinfo .profile_links p {
+  margin-bottom: 8%;
+  margin-left: 12%;
+}
+
+.sideinfo .profile_links a {
+  font-weight: bold;
+  font-size: 12pt;
+  text-decoration: underline;
+}
+
+
+/*Main body styles*/
+
+.mainbody {
+  text-align: left;
+  padding-left: 50px;
+}
+
+.sectionbox {
+  background-color: #ffffff;
+  border: solid;
+  border-color: #5da4d9;
+  border-width: thin;
+  padding-bottom: 30px;
+}
+
+.currentcourse {
+  height: 606px;
+}
+
+/*+1% margin left if neeed be
+  -1% width of div and line*/
+
+.sectionbox h2 {
+  color: #5da4d9;
+  margin-left: 9%;
+  margin-top: 20px;
+  font-size: 18pt;
+}
+
+.sectionbox .coursepicture {
+  padding-right: 5%;
+}
+
+.sectionbox h3 {
+  font-size: 12pt;
+  margin-top: 10px;
+}
+
+.sectionbox .line {
+  background-color: #315570;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  opacity: 0.4;
+  width: 82%;
+}
+
+.sectionbox div {
+  margin-left: 9%;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.sectionbox .course {
+  background: linear-gradient(90deg, #FFFFFF 96.5%, #5da4d9 3.5%);
+  background-blend-mode: lighten;
+  border: solid;
+  border-color: #315570;
+  border-width: thin;
+  border-radius: 0.2em;
+  margin-bottom: 3px;
+  width: 82%;
+  padding-top: 3px;
+  padding-bottom: 8px;
+}
+
+.sectionbox .editcourse {
+  float: right;
+  margin-right: 2%;
+  opacity: 0.5;
+  margin-top: 66%;
+  /*display: none;*/
+}
+.sectionbox .addcourse {
+  visibility: hidden;
+}
+
+.sectionbox .editcourse:hover {
+  opacity: 1;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.sectionbox p, span {
+  color: #767270;
+  font-weight: 300;
+  font-size: 10pt;
+  line-height: 5pt;
+}
+.schedulebox {
+  margin: 0;
+}
+
+.downsection {
+  margin-top: 20px;
+}
+
+.downsection div {
+  height: 200px;
+}
+
+.downsection img {
+  width: 48px;
+  height: 60px;
+  padding-bottom: 15px;
+  float: right;
+  margin-top: -14px;
+  margin-right: 5%;
+}
+
+.downsection h2 {
+  margin-top: 5px;
+  padding-top: 10px;
+}
+
+.flexedinside {
+  height: inherit;
+}
+
+.flexedcourses div {
+  margin-left: 0%;
+  padding-left: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+}
+
+.bookmarks div {
+  margin-left: 0%;
+  padding-left: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+}
+
+.flexedcourses .line {
+  padding-bottom: 1.5px;
+  margin-top: -20px;
+  margin-left: 10%;
+}
+
+.downsection .insidecourse {
+  height: 80%;
+  width: 95%;
+  margin-left: 5%;
+  overflow: auto;
+}
+
+.downsection .downbox {
+  margin: 0;
+  height: inherit;
+}
+
+.downsection .insidecourse p {
+  margin-top: 2px;
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 #5da4d9, 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.downsection .score {
+  text-align: right;
+  float: right;
+  padding-right: 4%;
+}
+
+.downsection .score1 {
+  height: 32px;
+  width: 32px;
+  margin-top: -3px;
+  float: right;
+  margin-right: 6%;
+  background-image: url(https://cdn3.iconfinder.com/data/icons/flat-actions-icons-9/792/Star_Gold-32.png);
+  background-repeat: no-repeat;
+}
+
+.endcourse {
+  display: inline;
+  float: right;
+  margin-top: -11%;
+  margin-right: -13%;
+  visibility: hidden;
+}
+.endcourse:hover {
+  opacity: 1;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.sectionbox div:last-child {
+  margin-bottom: 20px;
+}
+
+.cprof {
+  float: right;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 980px) {
+  .sideinfo {
+    height: 947px;
+  }
+  .currentcourse {
+    height: 724px;
+  }
+  .sideinfo .profile_links {
+    margin-top: 100%;
+  }
+  .cprof {
+    float: none;
+    display: block;
+    padding-top: 8px;
+    padding-bottom: 4px;
+  }
+  .cprof::before {
+    content: "\A";
+    white-space: pre;
+  }
+  .downsection h2 {
+    font-size: 14pt;
+  }
+  .downsection img {
+    width: 44px;
+    height: 56px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .sideinfo {
+      height: auto;
+  }
+  .currentcourse {
+      height: auto;
+      padding-bottom: 50px;
+  }
+  .sideinfo .profile_links {
+      margin-top: 15%;
+  }
+  .sideinfo .profile_poster .profile_title {
+    margin-left: 20px;
+  }
+  .mainbody {
+    padding-left: 0px;
+  }
+  .downsection div {
+    margin-bottom: 15px;
+  }
+  .downsection img {
+    margin-top: -13px;
+    margin-right: 10%;
+  }
+  .flexedcourses img {
+    width: 48px;
+    height: 60px;
+  }
+
+  .sectionbox .editcourse {
+  margin-top: 0;
+  }
+  .downsection .downbox {}
+  .endcourse {
+    margin-right: -9%;
+  }
+}
+
+
+/* Let's get this party started */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+
+/* Scrollbar Obtained from https://css-tricks.com/examples/WebKitScrollbars/ */
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #5da4d9;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #5da4d9;
+}
+
+.smoothFade {
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  /* ...and now for the proper property */
+  transition: .5s;
+}
+
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}

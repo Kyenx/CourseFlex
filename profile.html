@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="TeamCourseFlex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/profilestyle.css">
+	<link href="//fonts.googleapis.com/css?family=Roboto:
+		400,100,300,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="css/formControl.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- JQUERY -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link href="css/global.css" rel="stylesheet">
+	<script type="text/javascript" src="js/profilejs.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<title>Profile</title>
+</head>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<a class="navbar-brand" href="./index.html">
+			<img alt="Course Flex" src="./image/cfLogoTransparent.png" class="logo">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="nnavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="./search.html">Home</a></li>
+						<li><a href="./about.html">About Us</a></li>
+						<li><a href="" class="profileBut">Profile</a></li>
+						<li><a href="./faq.html">Help</a></li>
+						<li><a href="./index.html" class="logOut">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<body>
+	<!-- Wrap for main body -->
+	<div class="container">
+		<!-- Profile picture and information (in sidebar) -->
+
+		<aside class="col-sm-4 sideinfo shadow">
+			<!-- profile picture and title -->
+			<div class="profile_poster">
+				<div class="row profile_picture">
+					<!-- <img src="http://ieee.toronto.edu/img/cover/uoft-cover.jpg" alt=""> -->
+
+					<div class="col-sm-offset-1 profile_title">
+						<!-- User's name -->
+						<input id="uname" type="text" value="" disabled="disabled" />
+						<!-- Relevant tag (eg. 'cool' phrase, location) -->
+						<!-- <span>J Dawg</span> -->
+					</div>
+				</div>
+			</div>
+			<!-- User information -->
+			<div class="profile_information">
+				<!-- <ul>
+						<li>John Doe</li>
+						<li>4th Year Comp Sci</li>
+						<li>What else would a user want to see?</li>
+					</ul> -->
+				<!-- p around the image  -->
+				<p>
+					<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/avatar-32.png" alt="">
+					<!-- <span class="glyphicon glyphicon-user gly" aria-hidden="true"></span> -->
+					<input id="utorid" type="text" value="" disabled="disabled" /></p>
+				<div class="line shadow"></div>
+				<p class="img2"><img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/pen-32.png" alt="">
+					<input id="post" type="text" value="" disabled="disabled" />
+					<div class="line shadow"></div>
+				</p>
+				<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/cup-32.png" alt="">
+				<input id="stuff" type="text" value="Status" disabled="disabled" />
+				<div class="line shadow"></div>
+				<p class="editinfobuts">
+					<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/setting-32.png" class="editinfo editclick smoothFade" title="Edit Profile" id="editinfo" alt="Edit Profile">
+					<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/check-32.png" class="editinfo confirminfo" alt="">
+					<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/picture-32.png" class="editinfo editpicture" title="Change Profile Picture" data-toggle="modal" data-target="#myModal" alt="Change Profile Picture">
+				</p>
+
+			</div>
+			<div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog modal-sm">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">Change Profile Picture</h4>
+						</div>
+						<div class="modal-body">
+							<!-- Get file code obtained from http://stackoverflow.com/questions/10798761/how-to-link-an-input-button-to-a-file-select-window -->
+							<input type="text" id="pictureUrl" placeholder="Enter image a url" />
+							<!-- <button type="button" id="get_file" class="btn btn-default">Choose File</button>
+							<input type="file" id="my_file"> -->
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default savepicture">Save</button>
+							<button type="button" class="btn btn-default cancelpicture" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Useful Links (maybe) -->
+			<div class="row profile_links">
+				<h2>Quick Links</h2>
+				<p><a href="https://portal.utoronto.ca">Portal</a></p>
+				<p><a href="https://mail.utoronto.ca">Webmail</a></p>
+				<p><a href="http://www.rosi.utoronto.ca/">ACORN</a></p>
+			</div>
+		</aside>
+		<section class="col-sm-8 flexcontent">
+			<div class="row mainbody">
+				<div class="sectionbox currentcourse shadow" id="currentcourses">
+					<!-- <h2><img class="coursepicture" src="https://cdn3.iconfinder.com/data/icons/internet-and-web-4/78/internt_web_technology-05-32.png" alt="">Current Courses</h2>
+					<div class="line shadow"></div> -->
+					<!-- <div class="schedulebox"> -->
+					<!-- Course 1 -->
+					<!-- <div class="course" id="CSC309H1">
+						<h3 class="ctitle">CSC309 H1 <span class="clocation"> - BA 1200</span></h3>
+						<p class="ctime"> Mon-Wed: 10am - 11am
+							<span class="cprof">Patrick Stewart</span>
+						</p>
+						<p class="ctutorial">Tutorial : Fri: 10am - 11am [BA 3165]</p>
+						<img class='endcourse' src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/close2-32.png" alt="">
+					</div> -->
+				<!-- </div> -->
+					<!-- <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/setting-32.png" class="editcourse cEdit smoothFade" id="courseEdit" alt="">
+					<img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/plus-32.png" class="editcourse addcourse" title="Add course" data-toggle="modal" data-target="#myModal2" alt="Add course"> -->
+				</div>
+				<div class="modal fade" id="myModal2" role="dialog">
+					<div class="modal-dialog modal-sm">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal">&times;</button>
+								<h4 class="modal-title">Add new course</h4>
+							</div>
+							<div class="modal-body">
+								<!-- Get file code obtained from http://stackoverflow.com/questions/10798761/how-to-link-an-input-button-to-a-file-select-window -->
+								<input type="text" id="coursename" placeholder="Eg: CSC309" />
+								<!-- <button type="button" id="get_file" class="btn btn-default">Choose File</button>
+								<input type="file" id="my_file"> -->
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default savecourse">Save</button>
+								<button type="button" class="btn btn-default cancelcourse" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row downsection">
+
+
+					<div class="col-sm-6 flexedcourses">
+						<div class="col-sm-12 flexedinside sectionbox shadow">
+							<h2><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/730324-200.png" alt="">Flexed Courses</h2>
+							<!-- <div class="flexedcourses line shadow"></div> -->
+							<div class="insidecourse flexlist">
+
+
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6 bookmarks">
+						<div class="col-sm-12 bookmarksinside sectionbox shadow">
+							<h2><img src="https://d30y9cdsu7xlg0.cloudfront.net/png/688604-200.png" alt="">Wishlist</h2>
+							<div class="insidecourse">
+								<span class="score1"></span>
+								<p>PHY 220</p>
+								<span class="score1"></span>
+								<p>HPS 304</p>
+								<span class="score1"></span>
+								<p>ECE 226</p>
+								<span class="score1"></span>
+								<p>ANT 226</p>
+								<span class="score1"></span>
+								<p>ECE 226</p>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+
+</html>

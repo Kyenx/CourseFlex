@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="TeamCourseFlex">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/searchstyle.css">
+	<link href="//fonts.googleapis.com/css?family=Roboto:
+		400,100,300,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<link href="css/formControl.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- JQUERY -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<!-- bootstrap js -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+	<link href="css/global.css" rel="stylesheet">
+	<script type="text/javascript" src="js/searchjs.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<title>Search</title>
+</head>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+			<a class="navbar-brand" href="./index.html">
+			<img alt="Course Flex" src="./image/cfLogoTransparent.png" class="logo">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="nnavbar">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="./search.html">Home</a></li>
+						<li><a href="./about.html">About Us</a></li>
+						<li><a href="" class="profileBut">Profile</a></li>
+						<li><a href="./faq.html">Help</a></li>
+						<li><a href="./index.html" class="logOut">Logout</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<body>
+	<!-- Wrap for main body -->
+	<div class="container all_search">
+
+		<aside class="col-sm-3 search">
+			<!-- Search directly by course code -->
+			<div class="search_stuff">
+				<div class="row search_bar">
+
+					<input class="col-sm-8 course_code" id="searchfield" placeholder="Course Code.">
+					<button class="col-sm-4 cc_button" onclick="getResults()">Search</button>
+				</div>
+				<br>
+
+
+				<!-- Search by basic filters -->
+				<div class="row basic_filters">
+					<div class="col-sm-offset-1">
+
+						<div class="dropdown Program">
+    						<button class="dropdown-toggle filter" type="button" data-toggle="dropdown">
+							Program
+    						<span class="caret"></span></button>
+									<ul class="dropdown-menu basic_filters_type">
+										<form>
+											<!-- <li><input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"></li> -->
+											<li><input type="checkbox" name="cscid" id="cscid" value="Computer Science"> Computer Science</li>
+											 <li class="divider"></li>
+											<li><input type="checkbox" name="ecoid" id="ecoid" value="Economics"> Economics</li>
+											 <li class="divider"></li>
+											<li><input type="checkbox" name="staid" id="staid" value="Statistics"> Statistics</li>
+											 <li class="divider"></li>
+											<li>...</li>
+										</form>
+									</ul>
+  						</div>
+  						<br>
+  						<div class="dropdown Breadth Requirement">
+    						<button class="dropdown-toggle filter" type="button" data-toggle="dropdown">
+							Breadth Requirement
+    						<span class="caret"></span></button>
+    						<ul class="dropdown-menu basic_filters_type">
+									<form>
+	      						<li><input type="checkbox" value="Breadth 1"> 1. Creative and Cultural Representations</li>
+	      						 <li class="divider"></li>
+	      						<li><input type="checkbox" value="Breadth 2"> 2. Thought, Belief, and Behaviour</li>
+	      						 <li class="divider"></li>
+	      						<li><input type="checkbox" value="Breadth 3"> 3. Society and Its Institutions</li>
+	      						 <li class="divider"></li>
+	      						 <li><input type="checkbox" value="Breadth 4"> 4. Living Things and Their Environment</li>
+	      						 <li class="divider"></li>
+	      						<li><input type="checkbox" value="Breadth 5"> 5. The Physical and Mathematical Universes</li>
+									</form>
+    						</ul>
+  						</div>
+  						<br>
+  						<div class="dropdown Term">
+    						<button class="dropdown-toggle filter" type="button" data-toggle="dropdown">
+							Term
+    						<span class="caret"></span></button>
+    						<ul class="dropdown-menu basic_filters_type">
+									<form>
+	      						<li><input type="checkbox" value="Fall"> Fall</li>
+	      						 <li class="divider"></li>
+	      						<li><input type="checkbox" value="Winter"> Winter</li>
+									</form>
+								</ul>
+  						</div>
+  					</div></div>
+  					<br>
+
+  					<!-- Search by advanced filters -->
+  					<div class="row advanced_filters">
+  						  <div class="panel-group">
+    							<div class="panel panel-default">
+     								 <div class="advanced_box">
+       									 <h4 class="panel-title">
+          									<a data-toggle="collapse" href="#collapse1">+ Advanced Filters</a>
+        								</h4>
+      								</div>
+      								<div id="collapse1" class="panel-collapse collapse">
+        								<ul class="list-group">
+          									<li class="list-group-item">
+          										<div class="dropdown Program">
+    												<button class=" dropdown-toggle filter" type="button" data-toggle="dropdown">
+													Credit
+    												<span class="caret"></span></button>
+    												<ul class="dropdown-menu basic_filters_type">
+															<form>
+																<li><input type="checkbox" value="Half"> Half</li>
+      						 							<li class="divider"></li>
+      													<li><input type="checkbox" value="Full"> Full</li>
+															</form>
+														</ul>
+  												</div>
+  											</li>
+          									<li class="list-group-item">
+          										<div class="dropdown Breadth Requirement">
+    												<button class="dropdown-toggle filter" type="button" data-toggle="dropdown">
+													Level
+    												<span class="caret"></span></button>
+    												<ul class="dropdown-menu basic_filters_type">
+															<form>
+      													<li><input type="checkbox" value="100"> 100</li>
+      						 							<li class="divider"></li>
+      													<li><input type="checkbox" value="200"> 200</li>
+      						 							<li class="divider"></li>
+      													<li><input type="checkbox" value="300"> 300</li>
+      						 							<li class="divider"></li>
+      						 							<li><input type="checkbox" value="400"> 400</li>
+															</form>
+    												</ul>
+  												</div>
+  											</li>
+          									<li class="list-group-item">
+          										<div class="dropdown Term">
+    												<button class="dropdown-toggle filter" type="button" data-toggle="dropdown">
+													Course Type
+    												<span class="caret"></span></button>
+    												<ul class="dropdown-menu basic_filters_type">
+															<form>
+      													<li><input type="checkbox" value="Research"> Research</li>
+      													<li class="divider"></li>
+      													<li><input type="checkbox" value="Online"> Online</li>
+      						 							<li class="divider"></li>
+      						 							<li><input type="checkbox" value="Pass/Fail"> Pass/Fail</li>
+															</form>
+														</ul>
+  												</div>
+  											</li>
+       									</ul>
+    								</div>
+  							</div>
+  						</div>
+				</div>
+			</div>
+
+		</aside>
+
+		<!-- Initial Screen before any searches have been made -->
+		<section class="col-sm-9 welcome" id="welcome">
+			<div class=" welcome_user">
+				<h2 id="welcomes"></h2>
+			</div>
+		</section>
+
+		<!-- Three columns of search results TO VIEW SAMPLE RESULTS: click on search -->
+		<section class="search_results" id="search_results">
+			<div class="col-sm-3 results1" id="search_r">
+
+			</div>
+		</section>
+		<section class="col-sm-6 course_details" id="course_details">
+
+
+
+		</section>
+	</div>
+
+</body>
+
+</html>

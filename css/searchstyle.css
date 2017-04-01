@@ -1,0 +1,317 @@
+body{
+	background-image: url('../image/geometry2.png');
+}
+li {
+	padding-left: 5px;
+
+}
+ul{
+	padding: 0px;
+}
+.logo {
+  height: inherit;
+  width: inherit;
+  margin-top: -15px;
+}
+.search{
+	left:0px;
+	border-color: #75B4E2;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	background-color: white;
+	height: inherit;
+}
+
+.search_bar{
+
+	border-radius: 4px;
+	border-color: #e7e7e7;
+	padding: 10px;
+	background-color:#75B4E2;
+}
+.course_name{
+	background-color: white;
+	color: #75B4E2;
+	border-width: 0px;
+	padding: 2px;
+}
+.course_name:hover{
+	color: #2e3092;
+}
+
+.cc_button{
+	border-radius: 12px;
+	border-width: 0px;
+	color: white;
+	background-color: #2e3092;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+.filter {
+	width:100%;
+	background-color: white;
+	color:#737373;
+    border-radius: 4px;
+    border-width: 0px;
+    text-align: left;
+}
+.filter:hover{
+	background-color: #75B4E2;
+	color: #ffffff;
+}
+.basic_filters{
+	padding-right: 15px;
+}
+.basic_filters_type{
+	max-height: 200px;
+	overflow: scroll;
+}
+.search_results{
+	border-color: #75B4E2;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	border-radius: 4px;
+	height: inherit;
+}
+.advanced_box{
+	border-radius: 4px;
+	border-color: #e7e7e7;
+	padding: 12px;
+	background-color:#75B4E2;
+	color: #2e3092;
+}
+.welcome_user{
+	background-color:#75B4E2;
+	color: white;
+	padding: 110px;
+}
+.welcome{
+	height: inherit;
+}
+.search_results{
+	display: none;
+	overflow: scroll;
+	max-height: inherit;
+}
+.courses{
+	background-color: white;
+	margin-bottom: 10px;
+	border-style:solid;
+	border-color: #75B4E2;
+	border-radius: 8px;
+	border-width: 2px;
+	color:#2e3092;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	padding: 4px;
+
+}
+.course{
+	table-layout:inherit;
+	width: 100%;
+
+}
+
+th{
+	border-bottom: 1px solid black;
+}
+
+#search_r{
+	max-height: inherit;
+	overflow: scroll;
+}
+a{
+
+	color: #2e3092;
+
+}
+.flex_img{
+	width:23px;
+	height:23px;
+	padding: 0px;
+}
+.flex_img_details{
+	width:33px;
+	height:33px;
+	padding: 0px;
+}
+.flex_button{
+		padding: 0px;
+		background-color: white;
+		float:right;
+		position: relative;
+		border-width: 0px;
+		margin:0px;
+
+
+}
+.flex_details{
+		padding: 0px;
+		background-color: white;
+		float:left;
+		position: relative;
+		border-width: 0px;
+		margin:0px;
+
+
+}
+.num_flexes{
+	padding-top: 3px;
+	float: right;
+	position:relative;
+	margin: 0px;
+
+}
+.num_details{
+	padding-top: 3px;
+	float: left;
+	position:relative;
+	margin: 0px;
+	font-size: 20px;
+}
+h3{
+	font-size:15px;
+	padding-left: 15px;
+}
+
+.titletbl{
+	border-width: 0px;
+	table-layout: fixed;
+	padding-right: 0px;
+	/*margin-left: 0px;*/
+	/*padding-left:0px;*/
+}
+.num_flexes{
+	padding-top: 5px;
+	vertical-align: top;
+	/*padding-left: 10px;*/
+	padding-right: 5px;
+}
+
+.btn_flexes{
+	padding-top: 5px;
+	vertical-align: top;
+	padding-left: 30px;
+	/*padding-right: 5px;*/
+}
+
+.line {
+  background-color: #315570;
+  padding-bottom: 2px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  opacity: 0.4;
+  width: 100%;
+}
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.course_details{
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	background-color: white;
+	border-radius: 6px;
+	display:none;
+	color:#737373;
+	max-height: inherit;
+	overflow: scroll;
+}
+.desc{
+		padding-left: 15px;
+		padding-right:15px;
+}
+#tbl{
+	width: 100%;
+	border-collapse: collapse;
+
+}
+.timetbl{
+	border-collapse: collapse;
+	table-layout: fixed;
+	border: 1px solid #ddd;
+    text-align: left;
+	width:100%;
+}
+.timetbl_th, .timetbl_td{
+    border: 1px solid #ddd;
+    text-align: left;
+	padding: 3px;
+	color: #75B4E2;
+	/*overflow: hidden;*/
+	font-size: 15px;
+    font-size: 1vw;
+
+}
+#timetbl_btn{
+	border-radius: 8px;
+	background-color: #75B4E2;
+	color: white;
+	margin-bottom: 10px;
+
+}
+
+/*from w3schools*/
+
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+/*end*/
+
+.all_search{
+	max-height: 550px;
+}
+@media screen and (max-width: 766px) {
+	.timetbl_th, .timetbl_td{
+		font-size: 10px;
+	}
+}

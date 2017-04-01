@@ -1,0 +1,34 @@
+.login {
+	background-image: url('../image/geometry2.png');
+}
+
+.logo {
+	width: 25%;
+	display: block;;
+	margin: 0 auto;
+	position: fixed;
+	top: 45%;
+	left:10%;
+	transform: translateY(-50%);
+}
+
+.button {
+	float:right;
+	align: right;
+}
+
+.vertical-centre {
+	display: inline-block;;
+	width:35%;
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#rowHeight {
+	height:100vh;
+}
+
+#col-md-4-height {
+  height:100%;
+}

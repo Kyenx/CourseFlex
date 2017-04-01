@@ -1,0 +1,40 @@
+body {
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+   background-image: url('../image/geometry2.png');
+
+}
+.logo {
+ width: 23%;
+  display: block;;
+  margin: 0 auto;
+  position: center;
+  size:relative;
+  top: 40%;
+  left:10%;
+
+}
+
+.mainbody{
+  border: solid;
+  border-color: #75B4E2;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 5%;
+  padding-bottom: 2%;
+  padding: 20px;
+}
+h2{
+	  color:#2e3092;
+	  text-align: center;
+	  padding-top: 10px;
+
+}
+h3{
+	padding-top:20%; 
+}
+
+.text{
+	  color:#2e3092;
+}
