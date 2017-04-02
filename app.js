@@ -24,8 +24,6 @@ app.use(session({
 // app.use(express.static(__dirname + '../js'));
 // app.use(express.static(__dirname + '../image'));
 
-app.use('/cobalt', cobalt.Server);
-
 User = require('./schema/users');
 //Test = require('./schema/tests');
 StudentFlex = require('./schema/studentflex');
@@ -45,6 +43,10 @@ try {
 	mongoose.createConnection('mongodb://admin:admin@ds147480.mlab.com:47480/heroku_6hgf6q8p');
 }
 var db = mongoose.conncetion;
+
+var port = process.env.PORT || 3000;
+
+app.use('/cobalt', cobalt.Server);
 
 //load main page
 //req = request
@@ -400,5 +402,6 @@ app.put('/api/courses/:id', function(req, res) {
     });
 });
 
-app.listen(3000);
-console.log('Running on 3000');
+app.listen(port, function() {
+  console.log('Server running on port ' + port + '.');
+});
