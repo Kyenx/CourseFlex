@@ -1,0 +1,19 @@
+{
+  "name": "CourseFlex",
+  "description": "",
+  "scripts": {
+    "postdeploy": "mongod"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs#v83"
+    }
+  ]
+}
