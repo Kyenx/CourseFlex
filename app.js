@@ -38,9 +38,11 @@ CourseFlexes = require('./schema/courseflexes');
 
 //Connect to mongoose
 try {
-    mongoose.connect('mongodb://localhost/cobalt');
+    //mongoose.connect('mongodb://localhost/cobalt');
+	mongoose.connect('mongodb://admin:admin@ds147480.mlab.com:47480/heroku_6hgf6q8p');
 } catch (err) {
-    mongoose.createConnection('mongodb://localhost/cobalt');
+    //mongoose.createConnection('mongodb://localhost/cobalt');
+	mongoose.connect('mongodb://admin:admin@ds147480.mlab.com:47480/heroku_6hgf6q8p');
 }
 var db = mongoose.conncetion;
 
