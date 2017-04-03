@@ -46,7 +46,7 @@ var db = mongoose.conncetion;
 
 var port = process.env.PORT || 3000;
 
-app.use('/cobalt', cobalt.Server);
+//app.use('/cobalt', cobalt.Server);
 
 //load main page
 //req = request
