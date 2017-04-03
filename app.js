@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ // to support URL-encoded bodies
 }));
 
 //app.use(express.static(__dirname + '/'));
-app.use(express.static(path.join(__dirname, '../')));
+app.use(express.static(path.join(__dirname, '/')));
 
 app.use(session({
   secret: "g4a93iugnp9a4n90anp43u93t",
@@ -37,16 +37,14 @@ CourseFlexes = require('./schema/courseflexes');
 //Connect to mongoose
 try {
     //mongoose.connect('mongodb://localhost/cobalt');
-	mongoose.connect(process.env.MONGODB_URI);
+	mongoose.connect('mongodb://heroku_6hgf6q8p:vmsq1k84q103opadfiqr94aamr@ds147480.mlab.com:47480/heroku_6hgf6q8p/cobalt');
 } catch (err) {
     //mongoose.createConnection('mongodb://localhost/cobalt');
-	mongoose.createConnection(process.env.MONGODB_URI);
+	mongoose.createConnection('mongodb://heroku_6hgf6q8p:vmsq1k84q103opadfiqr94aamr@ds147480.mlab.com:47480/heroku_6hgf6q8p/cobalt');
 }
 var db = mongoose.conncetion;
 
-var port = process.env.PORT || 3000;
-
-//app.use('/cobalt', cobalt.Server);
+app.use('/cobalt', cobalt.Server);
 
 //load main page
 //req = request
@@ -402,6 +400,6 @@ app.put('/api/courses/:id', function(req, res) {
     });
 });
 
-app.listen(port, function() {
-  console.log('Server running on port ' + port + '.');
+app.listen(3000, function() {
+  console.log('Server running on port 3000.');
 });
