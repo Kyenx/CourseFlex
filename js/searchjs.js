@@ -150,7 +150,7 @@ xmlhttp.onreadystatechange = function() {
 										}
 								}
 								else if (creditFiltered[i].checked && creditFiltered[i].value == "Half") {
-									for (k = 0; k < obj.length; k++) {
+									for (k = 0; k < myObj.length; k++) {
 										if (myObj[k].code.slice(-1) != "Y") {
 											result.push(myObj[k]);
 										}
