@@ -41,7 +41,7 @@ function getResults(){
 	var dResult = "";
 	var searchfield = document.getElementById("searchfield").value;
 	var courseType = document.forms[5];
-	var url = "http://localhost:3000/cobalt/1.0/courses/filter?limit=100&q=";
+	var url = "https://strawberry-cupcake-85655.herokuapp.com/cobalt/1.0/courses/filter?limit=100&q=";
 	var credit = document.forms[3];
 	if(searchfield.length < 6){
 
