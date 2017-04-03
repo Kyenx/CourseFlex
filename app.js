@@ -37,10 +37,10 @@ CourseFlexes = require('./schema/courseflexes');
 //Connect to mongoose
 try {
     //mongoose.connect('mongodb://localhost/cobalt');
-	mongoose.connect(MONGODB_URI);
+	mongoose.connect(process.env.MONGODB_URI);
 } catch (err) {
     //mongoose.createConnection('mongodb://localhost/cobalt');
-	mongoose.createConnection(MONGODB_URI);
+	mongoose.createConnection(process.env.MONGODB_URI);
 }
 var db = mongoose.conncetion;
 
