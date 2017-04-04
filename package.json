@@ -11,8 +11,7 @@
     "body-parser":"*",
     "mongoose-auto-increment":"*",
     "mongoose":"*",
-    "express-session": "*",
-	"mongodb":"*"},
+    "express-session": "*"},
   "author": "Team 37!!!",
   "license": "ISC"
 }
