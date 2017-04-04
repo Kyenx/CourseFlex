@@ -1,5 +1,11 @@
 var cobaltResult;
-
+var cList = ['WDW','ACT','NEW','IFP','JQR','ENG','POL','USA','HIS','GGR','BIO','ANA','ANT','ARH','FAH','CLA','NMC','VIS',
+		'JAV','UNI','COG','CDN','AST','MAT','PHY','HPS','JPH','BCH','CHM','SMC','ABS','INI','MUS','FRE','CIN','WGS','JAL',
+		'GER','SLA','CTA','RLG','CSB','ANA','MGY','BCH','EEB','PSL','HMB','IMM','MST','STA','ENV','NUS','MSE','BCB','JUS',
+		'JDC','COL','CSC','LIN','CAS','EAS','MUN','DTS','SOC','PSY','CRI','DRM','ENV','ESS','JEG','JPE','JGA','ECO','SDS',
+		'NMC','HMB','NFS','FSL','WGS','JNS','EST','ETH','EUR','MGR','FIN','FOR','FRE','COG','HUN','IMM','IMC','TRN','CRI',
+		'ITA','CJS','JEH','JEI','JEE','JGI','JFV','KPE','LMP','MGY','SPA','LAS','HMU','MUS','NMC','NFS','PSL','PCJ','PHC',
+		'PHL','PLN','AST','PRT','PPG','GRK','MHB','RSM','JSV','IVP','SDS','JSU'];
 // Display the user's name on the Dashboard
 $.get("/api/users", function(data){
 	document.getElementById("welcomes").innerHTML = "Welcome " + data[0].firstname + " " + data[0].lastname;
@@ -41,9 +47,20 @@ function getResults(){
 	var dResult = "";
 	var searchfield = document.getElementById("searchfield").value;
 	var courseType = document.forms[5];
-	var url = "https://strawberry-cupcake-85655.herokuapp.com/cobalt/1.0/courses/filter?limit=100&q=";
+	var url = "http://localhost:3000/cobalt/1.0/courses/search?limit=100&q=\""+searchfield+"\" AND ";
 	var credit = document.forms[3];
-	if(searchfield.length < 6){
+	
+	if((searchfield.length > 2)&&(searchfield.length < 10)){
+		//var check = false;
+		
+		for (var x in cList) {
+			if(searchfield.substring(0,3).toUpperCase() == cList[x])
+				url = "/cobalt/1.0/courses/filter?limit=100&q=code:\""+searchfield+"\" AND ";
+
+		}
+	 } else if (searchfield.length < 1){
+		url = "http://localhost:3000/cobalt/1.0/courses/filter?limit=100&q=";
+	}
 
 	var i;
 	for (i = 0; i < department.length; i++) {
@@ -112,12 +129,6 @@ function getResults(){
 
 	creditFilter = advancedFilter(url, credit, courseType);
 	//console.log(creditFilter);
-} else {
-		url = "/cobalt/1.0/courses/filter?q=code:'"+searchfield+"'";
-		courseType = document.forms[5];
-		credit = document.forms[3];
-		creditFilter = advancedFilter(url, credit, courseType);
-	}
 
     document.getElementById("welcome").style.display="none";
     document.getElementById("search_results").style.display="inline";
@@ -150,7 +161,7 @@ xmlhttp.onreadystatechange = function() {
 										}
 								}
 								else if (creditFiltered[i].checked && creditFiltered[i].value == "Half") {
-									for (k = 0; k < myObj.length; k++) {
+									for (k = 0; k < obj.length; k++) {
 										if (myObj[k].code.slice(-1) != "Y") {
 											result.push(myObj[k]);
 										}
@@ -196,7 +207,7 @@ xmlhttp.onreadystatechange = function() {
     	}
     	// the given url does not exist, therefore no game data
     	else{
-
+		document.getElementById("search_r").innerHTML = "";
         	console.log("did not work!");
         }
 
@@ -229,6 +240,11 @@ function updateFlexes(el_code, el_id){
 					});
 
 }
+
+$(document).on("click", ".optcheck", function() {
+		getResults();
+		
+});
 
 function viewCourse(course){
 
