@@ -254,6 +254,14 @@ $(document).on("click", ".optcheck", function() {
 		
 });
 
+$(document).on("keypress", "#searchfield", function(event) {
+
+		var code = event.keyCode || event.which;
+    if (code == 13) {
+				getResults();
+    }
+});
+
 function viewCourse(course){
 
 	var details = document.getElementById("course_details");
