@@ -215,7 +215,7 @@ xmlhttp.onreadystatechange = function() {
     	}
     	// the given url does not exist, therefore no game data
     	else{
-
+		document.getElementById("search_r").innerHTML = "";
         	console.log("did not work!");
         }
 
@@ -248,6 +248,11 @@ function updateFlexes(el_code, el_id){
 					});
 
 }
+
+$(document).on("click", ".optcheck", function() {
+		getResults();
+		
+});
 
 function viewCourse(course){
 
