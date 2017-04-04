@@ -131,12 +131,6 @@ function getResults(){
 
 	creditFilter = advancedFilter(url, credit, courseType);
 	//console.log(creditFilter);
-// } else {
-// 		url = "/cobalt/1.0/courses/filter?q=code:'"+searchfield+"'";
-// 		courseType = document.forms[5];
-// 		credit = document.forms[3];
-// 		creditFilter = advancedFilter(url, credit, courseType);
-// 	}
 
     document.getElementById("welcome").style.display="none";
     document.getElementById("search_results").style.display="inline";
@@ -169,7 +163,7 @@ xmlhttp.onreadystatechange = function() {
 										}
 								}
 								else if (creditFiltered[i].checked && creditFiltered[i].value == "Half") {
-									for (k = 0; k < myObj.length; k++) {
+									for (k = 0; k < obj.length; k++) {
 										if (myObj[k].code.slice(-1) != "Y") {
 											result.push(myObj[k]);
 										}
